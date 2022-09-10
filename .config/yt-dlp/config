@@ -1,0 +1,1 @@
+--no-write-playlist-metafiles --output "~/Music/yt/%(title)s.%(ext)s"

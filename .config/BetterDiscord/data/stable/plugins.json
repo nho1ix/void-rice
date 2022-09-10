@@ -1,0 +1,21 @@
+{
+    "PluginRepo": true,
+    "BDFDB": false,
+    "ThemeRepo": true,
+    "CallTimeCounter": true,
+    "ZeresPluginLibrary": false,
+    "Translator": false,
+    "ReadAllNotificationsButton": true,
+    "BetterVolume": true,
+    "ImageUtilities": true,
+    "SplitLargeMessages": true,
+    "EditUsers": true,
+    "BetterRoleColors": true,
+    "BlurNSFW": true,
+    "Freemoji": false,
+    "MessageLoggerV2": true,
+    "NotificationSounds": true,
+    "ServerHider": true,
+    "WhoReacted": true,
+    "XenoLib": false
+}

@@ -1,0 +1,73 @@
+{
+    "settings": {
+        "obfuscateCSSClasses": true,
+        "autoBackup": false,
+        "dontSaveData": false,
+        "displayUpdateNotes": false,
+        "ignoreMutedGuilds": true,
+        "ignoreMutedChannels": true,
+        "ignoreBots": true,
+        "ignoreSelf": false,
+        "ignoreBlockedUsers": true,
+        "ignoreNSFW": false,
+        "ignoreLocalEdits": false,
+        "ignoreLocalDeletes": false,
+        "alwaysLogGhostPings": false,
+        "showOpenLogsButton": true,
+        "messageCacheCap": 100000,
+        "savedMessagesCap": 100000,
+        "reverseOrder": false,
+        "onlyLogWhitelist": true,
+        "whitelist": [
+            "905567759876902982"
+        ],
+        "blacklist": [],
+        "notificationBlacklist": [],
+        "toastToggles": {
+            "sent": false,
+            "edited": false,
+            "deleted": true,
+            "ghostPings": true
+        },
+        "toastTogglesDMs": {
+            "sent": false,
+            "edited": true,
+            "deleted": true,
+            "ghostPings": true,
+            "disableToastsForLocal": false
+        },
+        "useNotificationsInstead": true,
+        "blockSpamEdit": false,
+        "disableKeybind": false,
+        "cacheAllImages": true,
+        "dontDeleteCachedImages": false,
+        "aggresiveMessageCaching": true,
+        "renderCap": 500,
+        "maxShownEdits": 0,
+        "hideNewerEditsFirst": true,
+        "displayDates": true,
+        "deletedMessageColor": "",
+        "editedMessageColor": "",
+        "useAlternativeDeletedStyle": false,
+        "showEditedMessages": false,
+        "showDeletedMessages": true,
+        "showPurgedMessages": true,
+        "showDeletedCount": true,
+        "showEditedCount": true,
+        "alwaysLogSelected": true,
+        "alwaysLogDM": true,
+        "restoreDeletedMessages": true,
+        "contextmenuSubmenuName": "Message Logger",
+        "streamSafety": {
+            "showEdits": false,
+            "showDeletes": false,
+            "showButton": false,
+            "showNotifications": false,
+            "showContextMenu": false
+        },
+        "imageCacheDir": "/home/victor/.config/BetterDiscord/plugins/MLV2_IMAGE_CACHE",
+        "flags": 2,
+        "autoUpdate": true,
+        "versionInfo": "1.8.15"
+    }
+}

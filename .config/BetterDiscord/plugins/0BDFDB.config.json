@@ -1,0 +1,21 @@
+{
+	"all": {
+		"changeLogs": {
+			"EditUsers": "4.6.6",
+			"ImageUtilities": "4.8.5"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"showSupportBadges": false,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "07ff202a5639a8184e5362c4e55dfbbdcb9c6694",
+			"0BDFDB.raw.css": "98e9c027ef6e97326ac142859216e2f96c20ac4d"
+		}
+	}
+}
