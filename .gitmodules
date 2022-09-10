@@ -19,3 +19,6 @@
 	path = .config/suckless/st
 	url = https://github.com/nho1ix/st.git
   branch = void-desktop
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/NvChad/NvChad.git
