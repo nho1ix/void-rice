@@ -1,0 +1,101 @@
+[global]
+
+    monitor = 0
+    follow = mouse
+#    geometry = "0x5-35-35"
+    origin = bottom-right
+    offset = 35x35
+    width = (0, 300)
+    indicate_hidden = yes
+    shrink = no
+    transparency = 0
+    notification_height = 0
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    frame_width = 1
+#    frame_color = "#aaaaaa"
+    frame_color = "#e5e9f0"
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    font = "Product Sans Regular 12"
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+#    format = "<span foreground='#f3f4f5'><b>%s %p</b></span>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    word_wrap = no
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = no
+    icon_position = left
+    max_icon_size = 32
+    #icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/
+    icon_path = /usr/share/icons/candy-icons/apps/scalable:/usr/share/icons/candy-icons/devices/scalable/
+    sticky_history = yes
+    history_length = 20
+    dmenu = /usr/bin/dmenu -p dunst:
+    #browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/chromium -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    startup_notification = false
+    verbosity = mesg
+    corner_radius = 8
+    force_xinerama = false
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+    per_monitor_dpi = false
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    #background = "#222222"
+    #foreground = "#888888"
+    #foreground = "#ffd5cd"
+    foreground = "#fffcfc"
+    background = "#121212"
+    frame_color = "#181A20"
+    timeout = 5
+# icon = /
+    icon = ~/.config/dunst/images/notification.png
+
+  [urgency_normal]
+#    background = "#285577"
+#    background = "#222222"
+    #background = "#3B4252"
+    #foreground = "#FFFFFF"
+    #frame_color = "#181A20"
+    background = "#121212"
+    #foreground = "#ffd5cd"
+    foreground = "#fffcfc"
+    frame_color = "#181A20"
+    timeout = 5
+# icon = /
+    icon = ~/.config/dunst/images/notification.png
+
+[urgency_critical]
+    #background = "#900000"
+    #foreground = "#ffffff"
+    #frame_color = "#ff0000"
+    #timeout = 0
+    background = "#121212"
+    "foreground = "#ffd5cd" #FDF1DB #f5bfd2 #ff8585   #ffdfd3  #fec8d8      #FDF1DB #8fbcbb
+    foreground = "#fffcfc"
+    frame_color = "#181A20"
+    timeout = 0
+    icon=/usr/share/icons/Paper/16x16/status/dialog-warning.png
+
+[advertisements]
+    appname = brave
+    timeout = 1

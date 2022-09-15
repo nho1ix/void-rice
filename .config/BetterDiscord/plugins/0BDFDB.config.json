@@ -2,7 +2,7 @@
 	"all": {
 		"changeLogs": {
 			"EditUsers": "4.6.6",
-			"ImageUtilities": "4.8.5"
+			"ImageUtilities": "4.8.6"
 		},
 		"choices": {
 			"toastPosition": "right"
@@ -14,7 +14,7 @@
 			"useChromium": false
 		},
 		"hashes": {
-			"0BDFDB.data.json": "07ff202a5639a8184e5362c4e55dfbbdcb9c6694",
+			"0BDFDB.data.json": "3c0f0ddeace68ee2318289f4fa9d4cfb2c501c75",
 			"0BDFDB.raw.css": "98e9c027ef6e97326ac142859216e2f96c20ac4d"
 		}
 	}

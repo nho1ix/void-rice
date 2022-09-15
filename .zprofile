@@ -35,6 +35,8 @@ export LC_ALL=en_US.utf8
 export GOOGLE_API_KEY="AIzaSyCkfPOPZXDKNn8hhgu3JrA62wIgC93d44k"
 export GOOGLE_DEFAULT_CLIENT_ID="811574891467.apps.googleusercontent.com"
 export GOOGLE_DEFAULT_CLIENT_SECRET="kdloedMFGdGla2P1zacGjAQh"
+export SPICETIFY_INSTALL="/home/victor/.spicetify"
+export PATH="$PATH:/home/victor/.spicetify"
 
 # Automate startx
 if [ "$(tty)" = /dev/tty1 ]; then

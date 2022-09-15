@@ -1,4 +1,11 @@
 {
     "version": "1.6.3",
-    "emoteVersion": "v1.6.3"
+    "emoteVersion": "v1.6.3",
+    "drawerStates": {
+        "settings": {
+            "addons": false,
+            "developer": true,
+            "window": false
+        }
+    }
 }
