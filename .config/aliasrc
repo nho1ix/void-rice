@@ -1,11 +1,18 @@
+#!/bin/sh
 # System alias
 alias shutdown='sudo shutdown now'
-alias cosleep='sudo systemctl suspend'
 
-# Torbridge alias
-alias torbridge='sudo torbridge -c'
-# Redshift Alias
-alias redshift='redshift -l 38:127'
+# ls aliases
+alias ls='ls -lah'
+alias ld='exa -la'
+
+# Data management
+alias timeshift='sudo timeshift-gtk'
+alias gparted='sudo gparted'
+alias pny='cd /run/media/victor/4E57-2407/'
+alias mnt='sudo mount'
+alias mnts='sudo mount /dev/mapper/tsbackup /mnt'
+alias umnt='sudo umount /mnt'
 
 # Void Linux
 alias pacrep='sudo xbps-query -s'
@@ -17,28 +24,26 @@ alias sv='sudo sv'
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown now'
 
-# ls aliases
-alias ls='ls -lah'
-alias ld='exa -la'
-
-# Data management
-alias timeshift='sudo timeshift-gtk'
-alias gparted='sudo gparted'
-alias pny='cd /run/media/victor/4E57-2407/'
-alias grub-customizer='sudo grub-customizer'
-alias umnt='sudo umount /mnt'
-alias makeboot='sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo grub-mkconfig -o /boot/efi/EFI/arch/grub.cfg'
-alias vmback='sudo cryptsetup open /dev/sdb2 backups && sudo mount /dev/mapper/backups /mnt'
-
-## Grub aliases
-alias editgrub='sudo vim /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg && sudo grub-mkconfig -o /boot/efi/EFI/arch/grub.cfg'
-
 ## iPhone related aliases
 alias conphone='idevicepair pair && sudo ifuse -o allow_other /mnt'
 
 # Github aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias configg='/usr/bin/git --git-dir=$HOME/Desktop/dotfiles-mirror.git/ --work-tree=$HOME/Desktop/'
+alias c='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias cs='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status'
+alias ca='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add'
+alias caf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -f'
+alias cm='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m'
+alias cam='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -am'
+alias crm='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME rm -r'
+alias crmc='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME rm -r --cached'
+alias cres='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME restore --staged'
+alias cdd='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff'
+alias cdds='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --staged'
+alias cpush='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push'
+alias cpull='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME pull'
+
+alias configg='/usr/bin/git --git-dir=$HOME/Desktop/.dotfiles-mirror.git/ --work-tree=$HOME/Desktop/'
 alias bconfig='/usr/bin/git --git-dir=$HOME/bdata/ --work-tree=$HOME'
 alias configr='/usr/bin/git --git-dir=$HOME/misc/ --work-tree=$HOME'
 alias gitwall='/usr/bin/git --git-dir=$HOME/Pictures/GitWall --work-tree=$HOME/Pictures/'
@@ -49,9 +54,10 @@ alias gs='gst'
 
 # Shortcuts
 alias startc='cd ~/.config/suckless && cd dwm && sudo make install && .. && cd dmenu && sudo make install && .. && cd dwmblocks && sudo make install && .. && cd st && sudo make install && .. && cd slock && sudo make install && cd'
-alias csjf='cd ~/.config/suckless && cd dwm && git fetch upstream master && .. && cd dwmblocks && git fetch upstream master && .. && cd dmenu && git fetch upstream 5.0 && .. && cd slock && git fetch upstream master && .. && cd st && git fetch upstream master && cd'
+alias csjf='cd ~/.config/suckless && cd dwm && git fetch upstream master && .. && cd dwmblocks && git fetch upstream master && .. && cd dmenu && git fetch upstream master && .. && cd slock && git fetch upstream master && .. && cd st && git fetch upstream master && cd'
+
 #alias csjpull='cd ~/.config/suckless && cd dwm && git pull upstream master && .. && cd dwmblocks && git pull upstream master && .. && cd dmenu && git pull upstream 5.0 && .. && cd slock && git pull upstream master && .. && cd st && git pull upstream master && cd'
-alias csjpull='cd ~/.config/suckless && cd dwm && git pull upstream master && .. && cd dwmblocks && git pull upstream master && .. && cd dmenu && git pull upstream 5.0 && .. && cd slock && git pull upstream master && .. && cd'
+alias csjpull='cd ~/.config/suckless && cd dwm && git pull upstream master && .. && cd dwmblocks && git pull upstream main && .. && cd dmenu && git pull upstream master && .. && cd slock && git pull upstream master && .. && cd'
 alias csjpush='cd ~/.config/suckless && cd dwm && git push && .. && cd dwmblocks && git push && .. && cd dmenu && git push && .. && cd slock && git push && .. && cd st && git push && cd'
 alias npush='cd ~/vimwiki && ga * && gcam "Update notes" && gp && cd'
 alias pst='~/Pictures/Screenshots/Temporary'
@@ -61,59 +67,62 @@ alias ap='atomicparsley'
 alias yt='yt-dlp -f 140 --default-search "ytsearch" --embed-thumbnail "$@"'
 alias ffrecord='sh ~/.config/scripts/screencast_pulse.sh'
 alias ffcam='sh ~/.config/scripts/screencast_pulse_cam.sh'
-alias compiledj='cd $HOME/Downloads/pandoc/Daily\ Journal && pandoc dj.wiki -f vimwiki -t pdf -so dj.pdf'
 alias blueon='sudo rfkill unblock bluetooth && rfkill && sudo systemctl start bluetooth'
 alias blueoff='sudo rfkill block bluetooth && rfkill && sudo systemctl stop bluetooth'
 alias fixwifi='sudo rfkill unblock wlan && rfkill'
-alias fixiwif='sudo rfkill unblock wlan && rfkill'
-alias csj='cd ~/.config/suckless'
+alias csj='cd ~/.config/suckless && exa -la'
 alias newcron='sudo newcron'
 alias powertop='sudo powertop'
 alias gufw='sudo gufw'
-alias groffcompile='groff -ms *.ms -T pdf > *.pdf'
-alias dmenuunicode='sh ~/.local/bin/dmenuunicode'
-alias cldr='vim -c Calendar'
 
 # Pacman import / export lists
 alias expkglist='pacman -Q|cut -f 1 -d" " > packages.list'
 alias impkglist='sudo pacman -S $(cat packages.list)'
 
-# Battery 
-alias whendead='upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep -i time'
-alias bstat='upower -i /org/freedesktop/UPower/devices/battery_BAT1'
-
 # Misc / Fun Stuff
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-#alias pfetch='~/.config/paleofetch/paleofetch --recache'
-alias pfetch='paleofetch'
-alias fisha='asciiquarium'
-alias pdauto='sh ~/Downloads/pandoc/vwtopdf.sh'
-alias rspush='cd $HOME/Desktop/remotestash/bin && ./remotestash push'
-alias rspull='cd $HOME/Desktop/remotestash/bin && ./remotestash pull'
-alias vifm='~/.config/vifm/scripts/vifmrun'
-alias minecraft='java -jar ~/Downloads/Launcher/TLauncher2-82.jar'
-alias spongemc='java -Xms512M -Xmx1024M forge-1.16.5-36.0.42.jar nogui'
-alias vim='nvim'
+alias minecraft='java -jar ~/Downloads/Launcher/TLauncher2-86.jar'
 alias tg='telegram-cli -W -A'
 alias stmod='cd /run/timeshift/backup/home/victor/.steam/steamapps/common/tModLoader && ./tModLoaderServer'
 
-# alias lnperl='ln -s $HOME/.config/suckless/dwmblocks/perl/{battery,clock,cpu,disk,internet,memory,volume,weather,} $HOME/.local/bin/statusbar/{battery,clock,cpu,disk,internet,memory,volume,weather,}'
+# Vim
+alias vim='nvim'
+alias sn='sudo nvim'
+alias vifm='~/.config/vifm/scripts/vifmrun'
 
- streaming() {
-     INRES="1920x1080" # input resolution
-     OUTRES="1920x1080" # output resolution
-     FPS="60" # target FPS
-     GOP="120" # i-frame interval, should be double of FPS, 
-     GOPMIN="60" # min i-frame interval, should be equal to fps, 
-     THREADS="2" # max 6
-     CBR="1000k" # constant bitrate (should be between 1000k - 3000k)
-     QUALITY="ultrafast"  # one of the many FFMPEG preset
-     AUDIO_RATE="44100"
-     STREAM_KEY="$1" # use the terminal command Streaming streamkeyhere to stream your video to twitch or justin
-     SERVER="live-sjc" # twitch server in California, see https://bashtech.net/twitch/ingest.php to change 
-     
-     ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 -f alsa -i pulse -f flv -ac 2 -ar $AUDIO_RATE \
-       -vcodec libx264 -g $GOP -keyint_min $GOPMIN -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p\
-       -s $OUTRES -preset $QUALITY -tune film -acodec libmp3lame -threads $THREADS -strict normal \
-       -bufsize $CBR "rtmp://$SERVER.twitch.tv/app/$STREAM_KEY"
- }
+csjgs() {
+cd ~/.config/suckless && 
+cd dwm && 
+
+tput setab 1 && 
+echo dwm && 
+tput sgr 0 && 
+
+git status && 
+.. && 
+
+tput setab 1 && 
+echo dwmblocks &&
+tput sgr 0 && 
+cd dwmblocks && 
+git status && .. && 
+
+tput setab 1 && 
+echo dmenu && 
+tput sgr 0 && 
+cd dmenu && 
+git status && .. && 
+
+tput setab 1 && 
+echo slock && 
+tput sgr 0 && 
+cd slock && 
+git status && .. && 
+
+tput setab 1 && 
+echo st && 
+tput sgr 0 && 
+cd st && 
+git status && ..
+}
+
+# alias lnperl='ln -s $HOME/.config/suckless/dwmblocks/perl/{battery,clock,cpu,disk,internet,memory,volume,weather,} $HOME/.local/bin/statusbar/{battery,clock,cpu,disk,internet,memory,volume,weather,}'

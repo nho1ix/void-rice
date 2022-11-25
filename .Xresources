@@ -22,12 +22,16 @@
 #define nord13 #ECBE60
 #define nord14 #86C154
 #define nord15 #B56BA7
+#define nord16 #111016
+#define nord17 #000000
+#define nord18 #FFFFFF
+#define nord19 #212126
 
 *.foreground:   nord4
-*.background:   nord0
+*.background:   nord16
 *.cursorColor:  nord4
-*fading: 35
-*fadeColor: nord3
+! *fading: 35
+! *fadeColor: nord3
 
 *.color0: nord1
 *.color1: nord11
@@ -45,6 +49,10 @@
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
+*.color16: nord16
+*.color17: nord17
+*.color18: nord18
+*.color19: nord19
 
 ! Fonts
 Xft.antialias: true

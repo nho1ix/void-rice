@@ -17,7 +17,8 @@ export ZSH="/home/victor/.oh-my-zsh"
 
 #neofetch
 export HISTCONTROL=ignoreboth
-export PATH="/usr/lib/ccache/bin/:$PATH"
+export PATH="/usr/lib/ccache/bin/:/home/victor/.config/spicetify:$PATH"
+export PATH=$PATH:/home/victor/.spicetify
 source ~/.config/aliasrc
 
 # Set name of the theme to load --- if set to "random", it will
@@ -90,7 +91,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode)
+plugins=(git archlinux vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
